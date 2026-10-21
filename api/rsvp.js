@@ -3,7 +3,7 @@ module.exports = async (req, res) => {
   res.setHeader('Cache-Control', 'no-store');
   const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
   const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
-  if (!url || !token || !process.env.GUESTS_PASSWORD) return res.status(503).json({error:'Приём ответов пока настраивается. Пожалуйста, попробуйте позже.'});
+  if (!url || !token) return res.status(503).json({error:'Приём ответов пока настраивается. Пожалуйста, попробуйте позже.'});
   async function redis(command) {
     const r = await fetch(url, {method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(command)});
     const data = await r.json();
@@ -12,6 +12,7 @@ module.exports = async (req, res) => {
   }
   try {
     if (req.method === 'GET') {
+      if(!process.env.GUESTS_PASSWORD) return res.status(503).json({error:'Пароль организатора ещё не настроен.'});
       const expected=Buffer.from('Bearer '+process.env.GUESTS_PASSWORD), actual=Buffer.from(req.headers.authorization || '');
       if(actual.length!==expected.length || !timingSafeEqual(actual,expected)) return res.status(401).json({error:'Неверный пароль'});
       const entries = await redis(['HVALS','jubilee:2026:guests']);
