@@ -49,6 +49,17 @@
 .rsvp h2::after{content:"";display:block;width:150px;height:24px;margin:15px auto 17px;background:center/contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 28'%3E%3Cpath d='M0 14h65m50 0h65M90 2l7 8 9 4-9 4-7 8-7-8-9-4 9-4zM90 8c-11 0-10 12 0 13 10-1 11-13 0-13z' fill='none' stroke='%23c7a66d' stroke-width='1.5'/%3E%3C/svg%3E")}
 .rsvp{border-color:#c7a66daa}
 @media(prefers-reduced-motion:reduce){.rsvp input[type=text]{transition:none}}
+/* Верх открытки по первому образцу */
+.cover .eyebrow{margin-bottom:12px}
+.cover>.reference-divider{margin-bottom:8px;height:20px}
+.age{align-items:center;margin:0 0 12px;gap:17px}
+.age span{align-self:center;line-height:1.2}
+.age span::after{content:"";display:block;width:49px;height:20px;margin:6px auto 0;background:center/contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 24'%3E%3Cpath d='M2 6c8 9 16-5 27 3 8 6-3 14-5 7-2-6 9-7 8 0-1-7 10-6 8 0-2 7-13-1-5-7 11-8 19 6 27-3' fill='none' stroke='%23c7a66d' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E")}
+.caption{margin-top:0;margin-bottom:10px}
+h1{line-height:1.02}
+@media(min-width:601px){.cover{padding-top:26px}.age strong{font-size:100px}.caption{font-size:28px}}
+@media(max-width:600px){.cover{padding-top:25px}.eyebrow{font-size:10px;letter-spacing:.12em}.age{gap:15px;margin-bottom:11px}.age strong{font-size:92px}.age span{font-size:14px}.caption{font-size:26px}h1{font-size:51px}h1 span{font-size:34px}}
+@media(max-width:350px){.age strong{font-size:80px}h1{font-size:44px}h1 span{font-size:29px}}
 </style>
 </head>
 <body>
