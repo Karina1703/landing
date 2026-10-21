@@ -1,0 +1,16 @@
+[build]
+  command = "node scripts/build-static.js"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/rsvp"
+  to = "/.netlify/functions/rsvp"
+  status = 200
+  force = true
