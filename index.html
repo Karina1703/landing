@@ -15,20 +15,25 @@
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
 }
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#2a0a16;--cream:#f6ead3;--coral:#f0482a;--emerald:#0f6b57;--gold:#e9a443}}
+:root[data-theme="dark"]{--ink:#2a0a16;--cream:#f6ead3;--coral:#f0482a;--emerald:#0f6b57;--gold:#e9a443}
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;min-height:100vh;background:var(--ink);color:var(--ink);font-family:"Manrope",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;overflow-x:hidden}
+html{scroll-padding-top:env(safe-area-inset-top,0px);overflow-x:clip;-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;background:var(--ink);color:var(--ink);font-family:"Manrope",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;overflow-x:clip;width:100%}
+.disp{font-family:"Unbounded","Manrope",system-ui,Arial,sans-serif}
 
+/* бегущая строка */
 .marq{position:relative;z-index:3;background:var(--coral);color:var(--ink);overflow:hidden;white-space:nowrap;border-bottom:3px solid var(--ink)}
 .marq .track{display:inline-flex;gap:22px;padding:11px 0;animation:marq 28s linear infinite;font:800 14px/1 "Unbounded",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
 .marq span{display:inline-flex;align-items:center;gap:22px}
 .marq svg{width:16px;height:20px;color:var(--ink)}
 @keyframes marq{to{transform:translateX(-50%)}}
 
+/* звезда-сегозьлек на фоне */
 .star{position:fixed;left:50%;top:50%;width:min(130vw,980px);aspect-ratio:1;margin:calc(min(130vw,980px)/-2) 0 0 calc(min(130vw,980px)/-2);z-index:0;pointer-events:none;animation:spin 120s linear infinite;opacity:.55}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-main{position:relative;z-index:1;display:flex;justify-content:center;padding:34px 16px 22px}
+main{position:relative;z-index:1;display:flex;justify-content:center;padding:34px 16px 22px;overflow-x:clip}
 .card{
   position:relative;width:min(620px,100%);background:var(--cream);border-radius:34px;
   border:3px solid var(--ink);box-shadow:8px 8px 0 var(--coral);
@@ -37,11 +42,11 @@ main{position:relative;z-index:1;display:flex;justify-content:center;padding:34p
 .band{height:34px;border-radius:30px 30px 0 0;border-bottom:3px solid var(--ink);
   background:var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='30' viewBox='0 0 48 30'%3E%3Cpath fill='%23f0482a' d='M12 3c3 3 6 6 6 10a6 6 0 0 1-12 0c0-4 3-7 6-10z'/%3E%3Cpath fill='%230f6b57' d='M36 27c-3-3-6-6-6-10a6 6 0 0 1 12 0c0 4-3 7-6 10z'/%3E%3C/svg%3E") repeat-x center/auto 30px}
 .band.b{border-bottom:0;border-top:3px solid var(--ink);border-radius:0 0 30px 30px;position:absolute;left:0;right:0;bottom:0}
-.in{padding:30px 22px 44px}
+.in{padding:28px clamp(16px,5vw,24px) 48px}
 .tag{display:inline-block;background:var(--emerald);color:var(--cream);font:800 12px/1 "Unbounded",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:9px 16px;border-radius:99px;transform:rotate(-2deg)}
 h1{margin:18px 0 0;font:800 clamp(28px,7.6vw,54px)/1.04 "Unbounded",Arial,sans-serif;letter-spacing:-.02em;text-wrap:balance;animation:up .9s .2s both}
 h1 em{font-style:normal;color:var(--coral)}
-.name{margin:12px 0 4px;font:800 clamp(46px,15vw,104px)/1 "Unbounded",Arial,sans-serif;letter-spacing:-.04em;color:var(--emerald);animation:up .9s .35s both}
+.name{overflow-wrap:anywhere;margin:12px 0 4px;font:800 clamp(46px,15vw,104px)/1 "Unbounded",Arial,sans-serif;letter-spacing:-.04em;color:var(--emerald);animation:up .9s .35s both}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 26px;animation:up .9s .5s both}
 .tile{background:var(--ink);color:var(--cream);border-radius:22px;padding:16px 14px;text-align:left}
 .tile.w{grid-column:1/-1}
@@ -50,7 +55,7 @@ h1 em{font-style:normal;color:var(--coral)}
 @media (max-width:380px){.grid{grid-template-columns:1fr}}
 .btn{
   font:800 clamp(14px,3.8vw,17px)/1 "Unbounded",Arial,sans-serif;color:var(--cream);background:var(--ink);cursor:pointer;
-  border:3px solid var(--ink);border-radius:99px;padding:19px 30px;display:inline-flex;align-items:center;gap:12px;
+  border:3px solid var(--ink);border-radius:99px;padding:19px 24px;display:inline-flex;align-items:center;justify-content:center;gap:12px;width:100%;max-width:420px;min-height:62px;-webkit-tap-highlight-color:transparent;
   box-shadow:5px 5px 0 var(--coral);transition:transform .18s,box-shadow .18s,background .18s;animation:up .9s .65s both;
 }
 .btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--coral)}
@@ -60,11 +65,27 @@ h1 em{font-style:normal;color:var(--coral)}
 .btn svg{width:20px;height:20px}
 .thanks{min-height:24px;margin:18px 0 0;font-weight:700;color:var(--emerald);opacity:0;transition:opacity .6s}
 .thanks.on{opacity:1}
+.undo{background:none;border:0;min-height:44px;padding:0 12px;font:700 14px/1 "Manrope",Arial,sans-serif;color:var(--ink);opacity:.65;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.undo:hover{opacity:1}
+.undo:focus-visible,.map:focus-visible{outline:3px solid var(--emerald);outline-offset:3px;border-radius:6px}
+.date .d{display:flex;align-items:center;gap:14px}
+.tile p{margin:0;font:500 15px/1.5 "Manrope",Arial,sans-serif}
+.dots{display:flex;gap:8px;margin-top:14px}
+.dots i{width:28px;height:28px;border-radius:50%;border:2px solid var(--cream)}
+.prog{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.prog li{display:grid;grid-template-columns:62px 1fr;gap:12px;align-items:baseline;font:500 15px/1.35 "Manrope",Arial,sans-serif}
+.prog time{font:800 14px/1 "Unbounded",Arial,sans-serif;color:var(--gold)}
+.ph{border-bottom:2px dashed var(--gold);padding-bottom:1px}
+.day{font:800 clamp(52px,16vw,72px)/1 "Unbounded",Arial,sans-serif;color:var(--coral);letter-spacing:-.04em}
+.mon{font:500 clamp(15px,4.2vw,19px)/1.35 "Unbounded",Arial,sans-serif}
+.map{display:inline-flex;align-items:center;min-height:44px;margin-top:6px;color:var(--gold);font-weight:700;text-decoration:underline;text-underline-offset:4px}
 
+/* наклейки-очпочмаки на углах карточки */
 .st{position:absolute;width:var(--s);aspect-ratio:100/90;z-index:2;pointer-events:none;opacity:0;animation:stk 1.2s var(--dl) cubic-bezier(.2,1.2,.3,1) forwards}
 .st>div{width:100%;height:100%;animation:sway var(--sw) ease-in-out infinite alternate}
 .st svg,.och svg{width:100%;height:100%;display:block}
 
+/* летящие очпочмаки */
 .sky{position:fixed;inset:0;z-index:4;pointer-events:none;overflow:hidden}
 .och{position:absolute;left:0;top:0;width:var(--s);aspect-ratio:100/90;opacity:0;animation:fly var(--d) linear var(--dl) infinite}
 .och>div{width:100%;height:100%;animation:sway var(--sw) ease-in-out infinite alternate}
@@ -113,9 +134,9 @@ footer{position:relative;z-index:1;text-align:center;padding:14px 16px 34px;colo
 
 <main>
   <section class="card">
-    <div class="st" style="--s:78px;--r:-14deg;--dl:.9s;--sw:4.5s;left:-22px;top:-30px" aria-hidden="true"><div><svg><use href="#och"/></svg></div></div>
-    <div class="st" style="--s:66px;--r:12deg;--dl:1.2s;--sw:5.2s;right:-18px;top:90px" aria-hidden="true"><div><svg><use href="#och"/></svg></div></div>
-    <div class="st" style="--s:72px;--r:8deg;--dl:1.5s;--sw:4.8s;left:-16px;bottom:70px" aria-hidden="true"><div><svg><use href="#och"/></svg></div></div>
+    <div class="st" style="--s:78px;--r:-14deg;--dl:.9s;--sw:4.5s;left:-8px;top:-28px" aria-hidden="true"><div><svg><use href="#och"/></svg></div></div>
+    <div class="st" style="--s:66px;--r:12deg;--dl:1.2s;--sw:5.2s;right:-8px;top:96px" aria-hidden="true"><div><svg><use href="#och"/></svg></div></div>
+    <div class="st" style="--s:72px;--r:8deg;--dl:1.5s;--sw:4.8s;left:-8px;bottom:70px" aria-hidden="true"><div><svg><use href="#och"/></svg></div></div>
 
     <div class="band"></div>
     <div class="in">
@@ -124,15 +145,22 @@ footer{position:relative;z-index:1;text-align:center;padding:14px 16px 34px;colo
       <div class="name">Рифат</div>
 
       <div class="grid">
-        <div class="tile"><small>Дата</small><b>15 ноября 2026, воскресенье</b></div>
+        <div class="tile date w"><small>Дата</small><div class="d"><span class="day">15</span><span class="mon">ноября 2026<br>воскресенье</span></div></div>
         <div class="tile"><small>Время</small><b>17:00</b></div>
-        <div class="tile w"><small>Адрес</small><b>Казань, ул. Баумана, 1, банкетный зал «Тулпар»</b></div>
+        <div class="tile"><small>Осталось</small><b id="cd">…</b></div>
+        <div class="tile w"><small>Адрес</small><b>Казань, ул. Баумана, 1, банкетный зал «Тулпар»</b><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C%2C%20%D1%83%D0%BB.%20%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0%2C%201" target="_blank" rel="noopener">Открыть на карте →</a></div>
+        <div class="tile w"><small>Дресс-код</small><p>Нарядно и с настроением! Палитра вечера: бордовый, изумрудный и золотой. Будем рады татарским акцентам: тюбетей, орнамент, украшения.</p><div class="dots" aria-hidden="true"><i style="background:#6b1a2b"></i><i style="background:#0f6b57"></i><i style="background:#e9a443"></i><i style="background:#f6ead3"></i></div></div>
+        <div class="tile w"><small>Программа вечера</small><ul class="prog"><li><time>17:00</time><span>Сбор гостей, встреча с чаем</span></li><li><time>18:00</time><span>Торжественная часть и поздравления</span></li><li><time>19:30</time><span>Праздничный ужин, очпочмаки и тосты</span></li><li><time>21:00</time><span>Музыка и танцы</span></li></ul></div>
+        
+        
+        <div class="tile w"><small>Важно</small><p>Пожалуйста, подтвердите присутствие заранее, чтобы мы могли рассадить всех гостей и приготовить достаточно угощения.</p></div>
       </div>
 
       <button class="btn" id="rsvp" type="button"><span id="lbl">Подтвердить присутствие</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
       </button>
       <p class="thanks" id="thanks" role="status" aria-live="polite"></p>
+      <button class="undo" id="undo" type="button" hidden>Изменить ответ</button>
     </div>
     <div class="band b"></div>
   </section>
@@ -153,12 +181,15 @@ footer{position:relative;z-index:1;text-align:center;padding:14px 16px 34px;colo
     for(var k in v)el.style.setProperty(k,v[k]);
     sky.appendChild(el);
   }
-  var b=document.getElementById('rsvp'),t=document.getElementById('thanks'),lbl=document.getElementById('lbl'),done=false;
-  b.addEventListener('click',function(){
-    if(done)return;done=true;
-    lbl.textContent='Вы с нами ✓';b.classList.add('ok');
-    t.textContent='Спасибо! Будем рады видеть вас на празднике.';t.classList.add('on');
-  });
+  var b=document.getElementById('rsvp'),t=document.getElementById('thanks'),lbl=document.getElementById('lbl'),u=document.getElementById('undo'),cd=document.getElementById('cd'),K='rsvp-yes',on=false;
+  function set(v){b.classList.toggle('ok',v);b.setAttribute('aria-pressed',v);lbl.textContent=v?'Вы с нами ✓':'Подтвердить присутствие';t.textContent=v?'Спасибо! Будем рады видеть вас на празднике.':'';t.classList.toggle('on',v);u.hidden=!v}
+  try{on=localStorage.getItem(K)==='1'}catch(e){}
+  set(on);
+  b.addEventListener('click',function(){if(on)return;on=true;set(true);try{localStorage.setItem(K,'1')}catch(e){}});
+  u.addEventListener('click',function(){on=false;set(false);try{localStorage.removeItem(K)}catch(e){}});
+  var target=new Date(2026,10,15,17,0).getTime();
+  function tick(){var d=target-Date.now();if(d<=0){cd.textContent='Праздник начался';return}cd.textContent=Math.floor(d/864e5)+' дн. '+Math.floor(d%864e5/36e5)+' ч.'}
+  tick();setInterval(tick,60000);
 })();
 </script>
 </body>
