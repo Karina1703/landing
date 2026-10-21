@@ -15,7 +15,13 @@ module.exports = async (req, res) => {
       const entries = await redis(['HVALS','jubilee:2026:guests']);
       return res.status(200).json({guests:entries.map(x=>JSON.parse(x)).sort((a,b)=>b.createdAt.localeCompare(a.createdAt))});
     }
-    if(req.method!=='POST') {res.setHeader('Allow','GET, POST');return res.status(405).end();}
+    if(req.method==='DELETE') {
+      const body=typeof req.body==='string'?JSON.parse(req.body):req.body;
+      if(typeof body?.id!=='string' || !/^[a-f0-9-]{36}$/.test(body.id)) return res.status(400).json({error:'Некорректный идентификатор гостя.'});
+      await redis(['HDEL','jubilee:2026:guests',body.id]);
+      return res.status(200).json({ok:true});
+    }
+    if(req.method!=='POST') {res.setHeader('Allow','GET, POST, DELETE');return res.status(405).end();}
     const body=typeof req.body==='string'?JSON.parse(req.body):req.body;
     if(body?.website) return res.status(400).json({error:'Не удалось отправить ответ.'});
     const name=typeof body?.name==='string'?body.name.trim().replace(/\s+/g,' '):'';

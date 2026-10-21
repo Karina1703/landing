@@ -12,6 +12,7 @@ const rates=new Map();
 global.fetch=async(url,options)=>{
   const [cmd,key,...args]=JSON.parse(options.body);let result;
   if(cmd==='HSET'){data[args[0]]=args[1];fs.writeFileSync(dataFile+'.tmp',JSON.stringify(data),{mode:0o600});fs.renameSync(dataFile+'.tmp',dataFile);result=1}
+  else if(cmd==='HDEL'){delete data[args[0]];fs.writeFileSync(dataFile+'.tmp',JSON.stringify(data),{mode:0o600});fs.renameSync(dataFile+'.tmp',dataFile);result=1}
   else if(cmd==='HVALS')result=Object.values(data);
   else if(cmd==='INCR'){const now=Date.now(),prev=rates.get(key);const v=prev&&prev.until>now?prev:{n:0,until:now+60000};result=++v.n;rates.set(key,v)}
   else result=1;
