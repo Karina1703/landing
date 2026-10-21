@@ -1,4 +1,4 @@
-const { randomUUID, timingSafeEqual } = require('node:crypto');
+const { randomUUID } = require('node:crypto');
 module.exports = async (req, res) => {
   res.setHeader('Cache-Control', 'no-store');
   const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
@@ -12,9 +12,6 @@ module.exports = async (req, res) => {
   }
   try {
     if (req.method === 'GET') {
-      if(!process.env.GUESTS_PASSWORD) return res.status(503).json({error:'Пароль организатора ещё не настроен.'});
-      const expected=Buffer.from('Bearer '+process.env.GUESTS_PASSWORD), actual=Buffer.from(req.headers.authorization || '');
-      if(actual.length!==expected.length || !timingSafeEqual(actual,expected)) return res.status(401).json({error:'Неверный пароль'});
       const entries = await redis(['HVALS','jubilee:2026:guests']);
       return res.status(200).json({guests:entries.map(x=>JSON.parse(x)).sort((a,b)=>b.createdAt.localeCompare(a.createdAt))});
     }
