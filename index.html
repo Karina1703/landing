@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>60-летие Раиля Ильдаровича · 6 ноября 2026</title>
 <meta name="description" content="Приглашение на 60-летний юбилей Раиля Ильдаровича. 6 ноября 2026 года, 17:00, ресторан «Туган Авылым», большой зал, Казань.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#2a0a16; --cream:#f6ead3; --coral:#f0482a; --emerald:#0f6b57; --gold:#e9a443;
@@ -20,12 +17,12 @@
 :root[data-theme="dark"]{--ink:#2a0a16;--cream:#f6ead3;--coral:#f0482a;--emerald:#0f6b57;--gold:#e9a443}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px);overflow-x:clip;-webkit-text-size-adjust:100%}
-body{margin:0;min-height:100vh;background:var(--ink);color:var(--ink);font-family:"Manrope",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;overflow-x:clip;width:100%}
-.disp{font-family:"Unbounded","Manrope",system-ui,Arial,sans-serif}
+body{margin:0;min-height:100vh;background:var(--ink);color:var(--ink);font-family:Arial,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;overflow-x:clip;width:100%}
+.disp{font-family:Arial,Arial,system-ui,Arial,sans-serif}
 
 /* бегущая строка */
 .marq{position:relative;z-index:3;background:var(--coral);color:var(--ink);overflow:hidden;white-space:nowrap;border-bottom:3px solid var(--ink)}
-.marq .track{display:inline-flex;gap:22px;padding:11px 0;animation:marq 28s linear infinite;font:800 14px/1 "Unbounded",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.marq .track{display:inline-flex;gap:22px;padding:11px 0;animation:marq 28s linear infinite;font:800 14px/1 Arial,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
 .marq span{display:inline-flex;align-items:center;gap:22px}
 .marq svg{width:16px;height:20px;color:var(--ink)}
 @keyframes marq{to{transform:translateX(-50%)}}
@@ -44,15 +41,15 @@ main{position:relative;z-index:1;display:flex;justify-content:center;padding:34p
   background:var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='30' viewBox='0 0 48 30'%3E%3Cpath fill='%23f0482a' d='M12 3c3 3 6 6 6 10a6 6 0 0 1-12 0c0-4 3-7 6-10z'/%3E%3Cpath fill='%230f6b57' d='M36 27c-3-3-6-6-6-10a6 6 0 0 1 12 0c0 4-3 7-6 10z'/%3E%3C/svg%3E") repeat-x center/auto 30px}
 .band.b{border-bottom:0;border-top:3px solid var(--ink);border-radius:0 0 30px 30px;position:absolute;left:0;right:0;bottom:0}
 .in{padding:28px clamp(16px,5vw,24px) 48px}
-.tag{display:inline-block;background:var(--emerald);color:var(--cream);font:800 12px/1 "Unbounded",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:9px 16px;border-radius:99px;transform:rotate(-2deg)}
-h1{margin:22px 0 0;font:500 clamp(22px,5.4vw,32px)/1.3 "Unbounded",Arial,sans-serif;letter-spacing:-.035em;text-wrap:balance;animation:up .9s .2s both}
+.tag{display:inline-block;background:var(--emerald);color:var(--cream);font:800 12px/1 Arial,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:9px 16px;border-radius:99px;transform:rotate(-2deg)}
+h1{margin:22px 0 0;font:500 clamp(22px,5.4vw,32px)/1.3 Arial,Arial,sans-serif;letter-spacing:-.035em;text-wrap:balance;animation:up .9s .2s both}
 h1 em{font-style:normal;color:var(--coral)}
-.name{position:relative;width:fit-content;max-width:100%;margin:24px auto 0;padding:18px 24px 0;font:800 clamp(38px,9vw,58px)/1.08 "Unbounded",Arial,sans-serif;letter-spacing:-.045em;color:var(--emerald);animation:up .9s .35s both}
+.name{position:relative;width:fit-content;max-width:100%;margin:24px auto 0;padding:18px 24px 0;font:800 clamp(38px,9vw,58px)/1.08 Arial,Arial,sans-serif;letter-spacing:-.045em;color:var(--emerald);animation:up .9s .35s both}
 .name::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:110px;height:1px;background:linear-gradient(90deg,transparent,#c89b53,transparent)}
 .portrait{position:relative;margin:26px auto 36px;width:88%;max-width:340px;padding:7px;background:#fff8e9;border:1px solid #c89b53;border-radius:24px;box-shadow:0 8px 22px rgba(42,10,22,.12);isolation:isolate}
 .portrait img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:17px}
-.portrait figcaption{position:absolute;left:50%;bottom:-17px;transform:translateX(-50%);display:flex;align-items:baseline;gap:6px;white-space:nowrap;padding:9px 18px;background:var(--emerald);color:var(--cream);border:2px solid var(--cream);outline:1px solid #c89b53;border-radius:99px;font:800 22px/1 "Unbounded",Arial,sans-serif;box-shadow:0 3px 8px rgba(42,10,22,.1)}
-.portrait figcaption span{font:800 10px/1 "Unbounded",Arial,sans-serif}
+.portrait figcaption{position:absolute;left:50%;bottom:-17px;transform:translateX(-50%);display:flex;align-items:baseline;gap:6px;white-space:nowrap;padding:9px 18px;background:var(--emerald);color:var(--cream);border:2px solid var(--cream);outline:1px solid #c89b53;border-radius:99px;font:800 22px/1 Arial,Arial,sans-serif;box-shadow:0 3px 8px rgba(42,10,22,.1)}
+.portrait figcaption span{font:800 10px/1 Arial,Arial,sans-serif}
 .patronymic{display:block;margin-top:8px;font-size:.39em;font-weight:500;letter-spacing:.01em}
 .intro{max-width:410px;margin:30px auto 0;font-size:15px;line-height:1.8;text-wrap:pretty}
 .salutation{display:block;margin-bottom:14px;font-size:14px;line-height:1.65;letter-spacing:.025em;color:var(--emerald)}
@@ -61,11 +58,11 @@ h1 em{font-style:normal;color:var(--coral)}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 26px;animation:up .9s .5s both}
 .tile{background:var(--ink);color:var(--cream);border-radius:22px;padding:16px 14px;text-align:left}
 .tile.w{grid-column:1/-1}
-.tile small{display:block;font:700 11px/1 "Manrope",Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
-.tile b{display:block;font:500 clamp(16px,4.4vw,20px)/1.25 "Unbounded",Arial,sans-serif}
+.tile small{display:block;font:700 11px/1 Arial,Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
+.tile b{display:block;font:500 clamp(16px,4.4vw,20px)/1.25 Arial,Arial,sans-serif}
 @media (max-width:380px){.grid{grid-template-columns:1fr}}
 .btn{
-  font:800 clamp(14px,3.8vw,17px)/1 "Unbounded",Arial,sans-serif;color:var(--cream);background:var(--ink);cursor:pointer;
+  font:800 clamp(14px,3.8vw,17px)/1 Arial,Arial,sans-serif;color:var(--cream);background:var(--ink);cursor:pointer;
   border:3px solid var(--ink);border-radius:99px;padding:19px 24px;display:inline-flex;align-items:center;justify-content:center;gap:12px;width:100%;max-width:420px;min-height:62px;-webkit-tap-highlight-color:transparent;
   box-shadow:5px 5px 0 var(--coral);transition:transform .18s,box-shadow .18s,background .18s;animation:up .9s .65s both;
 }
@@ -76,19 +73,19 @@ h1 em{font-style:normal;color:var(--coral)}
 .btn svg{width:20px;height:20px}
 .thanks{min-height:24px;margin:18px 0 0;font-weight:700;color:var(--emerald);opacity:0;transition:opacity .6s}
 .thanks.on{opacity:1}
-.undo{background:none;border:0;min-height:44px;padding:0 12px;font:700 14px/1 "Manrope",Arial,sans-serif;color:var(--ink);opacity:.65;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.undo{background:none;border:0;min-height:44px;padding:0 12px;font:700 14px/1 Arial,Arial,sans-serif;color:var(--ink);opacity:.65;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
 .undo:hover{opacity:1}
 .undo:focus-visible,.map:focus-visible{outline:3px solid var(--emerald);outline-offset:3px;border-radius:6px}
 .date .d{display:flex;align-items:center;gap:14px}
-.tile p{margin:0;font:500 15px/1.5 "Manrope",Arial,sans-serif}
+.tile p{margin:0;font:500 15px/1.5 Arial,Arial,sans-serif}
 .dots{display:flex;gap:8px;margin-top:14px}
 .dots i{width:28px;height:28px;border-radius:50%;border:2px solid var(--cream)}
 .prog{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.prog li{display:grid;grid-template-columns:62px 1fr;gap:12px;align-items:baseline;font:500 15px/1.35 "Manrope",Arial,sans-serif}
-.prog time{font:800 14px/1 "Unbounded",Arial,sans-serif;color:var(--gold)}
+.prog li{display:grid;grid-template-columns:62px 1fr;gap:12px;align-items:baseline;font:500 15px/1.35 Arial,Arial,sans-serif}
+.prog time{font:800 14px/1 Arial,Arial,sans-serif;color:var(--gold)}
 .ph{border-bottom:2px dashed var(--gold);padding-bottom:1px}
-.day{font:800 clamp(52px,16vw,72px)/1 "Unbounded",Arial,sans-serif;color:var(--coral);letter-spacing:-.04em}
-.mon{font:500 clamp(15px,4.2vw,19px)/1.35 "Unbounded",Arial,sans-serif}
+.day{font:800 clamp(52px,16vw,72px)/1 Arial,Arial,sans-serif;color:var(--coral);letter-spacing:-.04em}
+.mon{font:500 clamp(15px,4.2vw,19px)/1.35 Arial,Arial,sans-serif}
 .map{display:inline-flex;align-items:center;min-height:44px;margin-top:6px;color:var(--gold);font-weight:700;text-decoration:underline;text-underline-offset:4px}
 
 /* наклейки-очпочмаки на углах карточки */
@@ -102,7 +99,7 @@ h1 em{font-style:normal;color:var(--coral)}
 .och>div{width:100%;height:100%;animation:sway var(--sw) ease-in-out infinite alternate}
 
 footer{position:relative;z-index:1;text-align:center;padding:14px 16px 34px;color:var(--cream)}
-.sign{margin:0;font:800 clamp(15px,4.4vw,20px)/1.3 "Unbounded",Arial,sans-serif;letter-spacing:.02em}
+.sign{margin:0;font:800 clamp(15px,4.4vw,20px)/1.3 Arial,Arial,sans-serif;letter-spacing:.02em}
 .sign i{font-style:normal;color:var(--coral)}
 
 @keyframes pop{from{opacity:0;transform:translateY(30px) scale(.96)}to{opacity:1;transform:none}}
@@ -175,6 +172,181 @@ h1{margin-top:24px;font-weight:800;font-size:clamp(25px,6vw,36px);line-height:1.
   .sign{font-size:13px;line-height:1.6}
   .marq .track{font-size:10px;padding:8px 0}
 }
+/* Сдержанное юбилейное приглашение */
+:root{--ink:#163c34;--cream:#f7f3e9;--coral:#a0834b;--emerald:#214e42;--gold:#c5ac79}
+body{background:#132f29;color:var(--ink)}
+.marq,.st,.sky,.star{display:none}
+main{padding:48px 20px 24px}
+.card{width:min(600px,100%);border:1px solid #b49c69;border-radius:3px;box-shadow:0 18px 60px #0002}
+.in{padding:40px 42px 44px;background:none}
+.band{height:14px;border:0;border-radius:0;background-color:transparent;background-size:auto 13px;opacity:.5;margin:12px 16px 0;filter:grayscale(1)}
+.band.b{height:14px;left:16px;right:16px;bottom:12px;border:0;border-radius:0;margin:0}
+.tag{background:none;color:#8d7448;border:0;border-radius:0;box-shadow:none;transform:none;font:700 10px/1.5 Arial,sans-serif;letter-spacing:.25em;padding:0}
+h1{font:400 clamp(27px,6vw,38px)/1.18 Georgia,Georgia,serif;letter-spacing:0;margin:20px 0 0}
+h1 em{color:var(--ink)}
+.name{font:500 clamp(48px,11vw,72px)/.95 Georgia,Georgia,serif;letter-spacing:-.02em;margin:14px auto 0;padding:0}
+.patronymic{font:400 .52em/1.3 Georgia,Georgia,serif;margin-top:6px;letter-spacing:0}
+.portrait{width:86%;max-width:330px;margin:28px auto 24px;transform:none;border-radius:2px;padding:5px;border:1px solid #b49c6977;background:#fffdf7;box-shadow:none}
+.portrait img{border-radius:0;filter:saturate(.9)}
+.portrait::before,.portrait::after,.portrait figcaption{display:none}
+.folk-divider{margin:22px auto 18px;color:#a0834b}
+.folk-divider svg{width:23px;height:30px;filter:grayscale(1);opacity:.7}
+.intro{font-size:14px;line-height:1.85;margin:0 auto;max-width:400px}
+.salutation{font:600 23px/1.25 Georgia,Georgia,serif;letter-spacing:0;text-transform:none;margin-bottom:16px}
+.salutation span{font:500 17px/1.5 Georgia,Georgia,serif;letter-spacing:0;margin-top:4px}
+.intro::after{font-size:12px;margin-top:22px;color:#a0834b}
+.folk-ribbon{display:none}
+.grid{gap:0;margin:24px 0 0;border-top:1px solid #b49c6955}
+.tile{background:none;color:var(--ink);border:0;border-bottom:1px solid #b49c6955;border-radius:0;padding:20px 8px;text-align:center;overflow-wrap:normal}
+.tile small{color:#8d7448;font-size:9px;letter-spacing:.2em}
+.tile small::before{display:none}
+.tile b{font:500 22px/1.3 Georgia,Georgia,serif}
+.tile p{font-size:13px;line-height:1.8}
+.date .d{justify-content:center}
+.day{color:var(--ink);font:500 64px/1 Georgia,Georgia,serif;letter-spacing:-.03em}
+.mon{font:500 22px/1.25 Georgia,Georgia,serif;text-align:left}
+footer{padding:0 20px 36px;color:#e9e3d4}
+.sign{font:400 21px/1.5 Georgia,Georgia,serif;letter-spacing:0}
+.sign i{display:none}
+@media(max-width:600px){main{padding:20px 14px 16px}.card{border-radius:3px;box-shadow:0 10px 30px #0002}.in{padding:24px 22px 36px}.band{height:12px;background-size:auto 12px;border-radius:0}.band.b{border-radius:0;height:12px}.tag{font-size:9px;padding:0}h1{font-size:29px;margin-top:18px}.name{font-size:52px;margin-top:12px}.patronymic{font-size:.5em}.portrait{margin:24px auto 20px;border-radius:2px;padding:4px;width:90%}.portrait img{border-radius:0}.intro{font-size:13px;line-height:1.8;margin-top:0}.salutation{font-size:21px}.salutation span{font-size:16px}.tile{padding:17px 4px;border-radius:0}.tile b{font-size:21px}.tile p{font-size:13px}.day{font-size:58px}.mon{font-size:20px}.sign{font-size:19px}}
+/* Торжественные национальные акценты */
+body{background:radial-gradient(ellipse at 50% 10%,#295247 0%,#132f29 75%)}
+.card::before{content:"";position:absolute;inset:8px;border:1px solid #b49c6945;pointer-events:none;z-index:2}
+.band{height:20px;margin:16px 22px 0;opacity:1;filter:none;background-color:transparent;background-size:auto 18px}
+.band.b{height:20px;bottom:16px;left:22px;right:22px;margin:0}
+.tag{color:#93713a;display:inline-flex;align-items:center;gap:12px}
+.tag::before,.tag::after{content:"◆";font-size:6px;color:#b49c69}
+.in{padding-top:30px;padding-bottom:52px}
+.portrait{border-color:#b49c69;box-shadow:0 8px 24px #163c3410}
+.folk-divider{gap:14px;margin:24px auto 20px}
+.folk-divider svg{width:28px;height:36px;filter:none;opacity:1;color:var(--emerald)}
+.folk-divider::before,.folk-divider::after{width:80px;background:linear-gradient(90deg,transparent,#b49c69)}
+.salutation{color:#214e42}
+.tile small{color:#93713a}
+.tile:last-child{border-bottom:0}
+.sign{color:#f4ecdb}
+@media(max-width:600px){.in{padding-top:26px;padding-bottom:44px}.band{height:16px;background-size:auto 15px;margin-top:14px}.band.b{height:16px;bottom:14px;margin:0}.folk-divider svg{width:25px;height:32px}.folk-divider::before,.folk-divider::after{width:55px}}
+/* Читаемая типографика */
+h1{font-weight:600;line-height:1.25}
+.name{font-weight:600}
+.patronymic{font-weight:500}
+.tag{font-size:11px;letter-spacing:.18em;color:#765b30}
+.intro{font:500 16px/1.8 Arial,Arial,sans-serif;color:#163c34}
+.salutation{font:700 16px/1.55 Arial,Arial,sans-serif;margin-bottom:18px}
+.salutation span{font:500 15px/1.6 Arial,Arial,sans-serif;margin-top:4px}
+.tile small{font:700 11px/1.5 Arial,Arial,sans-serif;letter-spacing:.12em;color:#765b30}
+.tile b{font:700 20px/1.5 Arial,Arial,sans-serif}
+.tile p{font:500 15px/1.8 Arial,Arial,sans-serif}
+.mon{font:500 18px/1.5 Arial,Arial,sans-serif}
+.sign{font:500 16px/1.8 Arial,Arial,sans-serif}
+@media(max-width:600px){h1{font-size:30px}.name{font-size:52px}.tag{font-size:10px}.intro{font-size:15px;line-height:1.8}.salutation{font-size:15px}.salutation span{font-size:14px}.tile small{font-size:10px}.tile b{font-size:18px}.tile p{font-size:14px}.mon{font-size:16px}.sign{font-size:15px}}
+/* Финальная отделка */
+.card{background:linear-gradient(135deg,#fffaf0 0%,#f6f0e3 65%,#f0e7d5 100%);box-shadow:0 24px 80px #071d2440}
+.in{background:transparent}
+.card::before{inset:9px;border-color:#b49c6955}
+h1{font-size:clamp(30px,6vw,39px);font-weight:500;margin-top:22px}
+.name{margin-top:18px;font-size:clamp(52px,11vw,74px)}
+.patronymic{font-size:.49em}
+.portrait{margin-top:30px;padding:7px;background:#fffcf5;border:1px solid #b49c69;outline:1px solid #b49c6933;outline-offset:5px;box-shadow:0 12px 28px #173c3415}
+.folk-divider{margin-top:30px;margin-bottom:24px}
+.intro{max-width:390px}
+.grid{margin-top:30px;border-top:1px solid #b49c6970}
+.tile{padding:23px 8px;border-bottom-color:#b49c6945}
+.tile.date{background:#214e4207}
+.tile small{margin-bottom:10px}
+.tile.date small{margin-bottom:6px}
+.day{font-weight:500;font-size:70px}
+footer{padding-top:4px;padding-bottom:40px}
+@media(max-width:600px){main{padding:18px 12px 18px}.in{padding-left:24px;padding-right:24px}h1{font-size:30px}.name{font-size:54px}.portrait{margin-top:26px;width:94%;padding:5px;outline-offset:4px}.folk-divider{margin-top:26px;margin-bottom:20px}.grid{margin-top:24px}.tile{padding:19px 4px}.day{font-size:62px}.tile b{font-size:18px}.tile p{font-size:14px}}
+@media(max-width:600px){
+  .in{padding-left:22px;padding-right:22px}
+  .tag{font-size:11px;letter-spacing:.12em}
+  h1{font-size:32px;line-height:1.2}
+  .name{font-size:56px;line-height:1.05}
+  .patronymic{font-size:28px;line-height:1.3}
+  .intro{font-size:16px;line-height:1.75;text-wrap:pretty}
+  .salutation{font-size:17px;line-height:1.5}
+  .salutation span{font-size:16px;line-height:1.6}
+  .tile small{font-size:12px;letter-spacing:.07em;line-height:1.5}
+  .tile b{font-size:20px;line-height:1.5;text-wrap:balance}
+  .tile p{font-size:16px;line-height:1.7}
+  .mon{font-size:17px;line-height:1.5}
+  .day{font-size:64px}
+  .sign{font-size:16px;line-height:1.75}
+}
+@media(max-width:350px){
+  .in{padding-left:18px;padding-right:18px}
+  h1{font-size:29px}.name{font-size:50px}.patronymic{font-size:25px}
+  .date .d{gap:10px}.day{font-size:56px}.mon{font-size:16px}
+}
+.band{height:34px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='36' viewBox='0 0 100 36'%3E%3Cg fill='none' stroke='%23b49c69' stroke-width='1'%3E%3Cpath d='M0 29Q25 29 25 16T50 3M50 3Q75 3 75 16T100 29'/%3E%3C/g%3E%3Cg fill='%23214e42'%3E%3Cpath d='M25 25C10 25 10 14 10 14c12 0 15 11 15 11zM25 18C40 18 40 8 40 8c-12 0-15 10-15 10zM75 25C60 25 60 14 60 14c12 0 15 11 15 11zM75 18C90 18 90 8 90 8c-12 0-15 10-15 10z'/%3E%3C/g%3E%3Cpath d='M50 27c-9 0-12-6-11-14l7 4 4-8 4 8 7-4c1 8-2 14-11 14z' fill='%23b49c69'/%3E%3C/svg%3E");background-size:100px 36px;background-repeat:repeat-x;background-position:center}
+.band.b{height:34px;transform:rotate(180deg)}
+.folk-divider{gap:8px}
+.folk-divider svg{width:22px;height:29px;transform:rotate(-15deg)}
+.folk-divider svg:last-child{transform:rotate(15deg)}
+.folk-divider .folk-center{width:30px;height:40px;transform:none}
+.folk-divider::before,.folk-divider::after{width:60px}
+.in{padding-bottom:66px}
+@media(max-width:600px){.band,.band.b{height:28px;background-size:82px 30px}.in{padding-bottom:58px}.folk-divider::before,.folk-divider::after{width:35px}}
+.portrait{width:88%;max-width:350px;margin:30px auto 28px;padding:9px;background:#fffdf7;border:1px solid #b49c6980;outline:none;border-radius:2px;transform:none;box-shadow:0 10px 25px rgba(22,60,52,.09)}
+.portrait img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:center;border:1px solid #163c3418;border-radius:0;filter:none}
+.portrait::before,.portrait::after,.portrait figcaption{display:none}
+@media(max-width:600px){.portrait{width:96%;max-width:350px;padding:7px;margin:26px auto 24px;border-radius:2px;outline:none}.portrait img{border-radius:0}}
+/* Защита адаптивного макета */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+@supports(overflow:clip){html,body{overflow-x:clip}}
+main,.card,.in,.grid,.tile,footer{min-width:0;max-width:100%}
+img{max-width:100%;height:auto}
+h1,.name,.patronymic,.intro,.tile,.sign{overflow-wrap:anywhere}
+.card,h1,.name,.grid{animation:none}
+.date .d{flex-wrap:wrap}
+@media(max-width:350px){.patronymic{font-size:clamp(21px,7.5vw,25px)}.folk-divider{gap:5px}.tile small{letter-spacing:.03em}}
+@media(min-width:900px){
+  main{padding:52px 32px 28px}
+  .card{width:640px;max-width:100%}
+  .in{padding:32px 54px 64px}
+  h1{font-size:38px}
+  .name{font-size:74px}
+  .portrait{max-width:360px;margin-top:30px}
+  .intro{max-width:430px;font-size:17px;line-height:1.8}
+  .salutation{font-size:18px}
+  .salutation span{font-size:16px}
+  .tile b{font-size:22px}
+  .tile p{font-size:16px}
+  footer{padding-bottom:44px}
+}
+/* Открытка: ясная типографика и мягкое движение */
+h1{font-family:Georgia,Georgia,serif;font-weight:400;font-size:clamp(27px,5.5vw,35px);line-height:1.35}
+.name{font-family:Georgia,Georgia,serif;font-weight:500;font-size:clamp(45px,10vw,62px);line-height:1.15;letter-spacing:-.035em}
+.patronymic{font-family:Georgia,Georgia,serif;font-size:.47em;font-weight:400;line-height:1.5;letter-spacing:0}
+.card{animation:card-reveal 1s ease-out both}
+.card::before{animation:frame-glow 7s ease-in-out infinite}
+.portrait{animation:portrait-reveal 1.2s ease-out both}
+.folk-divider{animation:portrait-reveal 1.4s ease-out both}
+@keyframes card-reveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes portrait-reveal{from{opacity:0}to{opacity:1}}
+@keyframes frame-glow{0%,100%{border-color:#b49c6945;box-shadow:inset 0 0 12px #b49c6900}50%{border-color:#b49c6999;box-shadow:inset 0 0 16px #b49c6910}}
+@media(max-width:600px){h1{font-size:28px}.name{font-size:46px}.patronymic{font-size:25px}.intro{font-size:16px}.tile b{font-size:20px}#countdown{font-size:18px;line-height:1.7}}
+@media(max-width:350px){h1{font-size:25px}.name{font-size:42px}.patronymic{font-size:23px}}
+/* Ровный светлый фон без затемнённых подложек */
+.card{background:#faf6ec}
+.tile.date{background:transparent}
+.card::before{animation:none;box-shadow:none;border-color:#b49c6955}
+/* Прокрутка без видимой полосы, включая старые WebKit */
+html,body{overflow-x:hidden;scrollbar-width:none;-ms-overflow-style:none}
+html::-webkit-scrollbar,body::-webkit-scrollbar{display:none;width:0;height:0}
+.card{width:100%;max-width:600px}
+@media(min-width:900px){.card{max-width:640px}}
+.grid{display:block}
+.name{max-width:100%;word-wrap:break-word}
+img{max-width:100%}
+/* Системные шрифты доступны сразу: без сетевой подмены и скачка текста */
+:root{color-scheme:light}
+body{font-family:Arial,"Helvetica Neue",sans-serif}
+h1,.name,.patronymic,.day{font-family:Georgia,"Times New Roman",serif}
+.card{animation:invitation-enter 800ms cubic-bezier(.2,.65,.3,1) both}
+h1,.name,.grid,.portrait,.folk-divider{animation:none}
+@keyframes invitation-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.01s!important;animation-iteration-count:1!important}
   .sky,.star{display:none}
@@ -185,7 +357,7 @@ h1{margin-top:24px;font-weight:800;font-size:clamp(25px,6vw,36px);line-height:1.
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="tl" viewBox="0 0 24 32"><path fill="currentColor" d="M12 1c3 4 8 7 8 14a8 8 0 0 1-16 0c0-7 5-10 8-14z"/></symbol>
-  <symbol id="folk-tulip" viewBox="0 0 40 50"><path d="M20 45V24" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 33C7 33 5 23 5 23c11-1 15 10 15 10zm0 6c13 0 15-10 15-10-11-1-15 10-15 10z" fill="currentColor"/><path d="M20 4l6 10 9-6c1 15-5 21-15 21S4 23 5 8l9 6z" fill="#f0482a"/><path d="M20 10v14" stroke="#e9a443" stroke-width="2" fill="none"/></symbol>
+  <symbol id="folk-tulip" viewBox="0 0 40 50"><path d="M20 45V24" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 33C7 33 5 23 5 23c11-1 15 10 15 10zm0 6c13 0 15-10 15-10-11-1-15 10-15 10z" fill="currentColor"/><path d="M20 4l6 10 9-6c1 15-5 21-15 21S4 23 5 8l9 6z" fill="#214e42"/><path d="M20 10v14" stroke="#e9a443" stroke-width="2" fill="none"/></symbol>
   <symbol id="och" viewBox="0 0 100 90">
     <path d="M50 4c5 0 8 4 11 10l33 58c4 8 0 14-8 14H14c-8 0-12-6-8-14l33-58c3-6 6-10 11-10z" fill="#e9a443" stroke="#2a0a16" stroke-width="5" stroke-linejoin="round"/>
     <path d="M50 16L18 72M50 16l32 56M22 76h56" fill="none" stroke="#2a0a16" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 7" opacity=".75"/>
@@ -219,21 +391,21 @@ h1{margin-top:24px;font-weight:800;font-size:clamp(25px,6vw,36px);line-height:1.
 
     <div class="band"></div>
     <div class="in">
-      <svg aria-hidden="true" width="100%" height="210" viewBox="0 0 500 210" preserveAspectRatio="none" style="position:absolute;inset:0 0 auto;pointer-events:none"><g fill="#e9a443"><circle cx="26" cy="42" r="4"/><circle cx="472" cy="147" r="3"/><path d="M38 120l5 9-10-1z"/></g><g fill="#f0482a"><rect x="461" y="48" width="4" height="13" rx="2" transform="rotate(24 463 54)"/><circle cx="22" cy="184" r="3"/></g><g fill="#0f6b57"><rect x="37" y="73" width="4" height="12" rx="2" transform="rotate(-24 39 79)"/><path d="M472 94l5 9-10-1z"/></g></svg>
-      <span class="tag">60 лет · Юбилей</span>
+
+      <span class="tag">Юбилейный вечер</span>
       <h1>Приглашаем<br>на <em>60-летие</em></h1>
       <div class="name">Раиля<span class="patronymic">Ильдаровича</span></div>
       <figure class="portrait"><img src="assets/rail-portrait.jpg" width="750" height="500" alt="Раиль Ильдарович" fetchpriority="high"><figcaption>60 <span>лет</span></figcaption></figure>
-      <div class="folk-divider" aria-hidden="true"><svg><use href="#folk-tulip"/></svg></div>
-      <p class="intro"><strong class="salutation">ДОРОГИЕ ДРУЗЬЯ,<span lang="tt">ХӨРМӘТЛЕ ДУСЛАРЫМ!</span></strong>Приглашаем вас на юбилей Раиля Ильдаровича! Давайте вместе отметим его 60-летие в кругу родных и друзей.</p>
+      <div class="folk-divider" aria-hidden="true"><svg><use href="#folk-tulip"/></svg><svg class="folk-center"><use href="#folk-tulip"/></svg><svg><use href="#folk-tulip"/></svg></div>
+      <p class="intro"><strong class="salutation">Дорогие друзья,<span lang="tt">Хөрмәтле дусларым!</span></strong>Приглашаем вас на торжественный вечер, посвящённый 60-летию Раиля Ильдаровича. Будем рады разделить с вами это знаменательное событие.</p>
 
       <div class="folk-ribbon"><svg aria-hidden="true" viewBox="0 0 100 90"><use href="#och"/></svg><span lang="tt">Рәхим итегез!</span><span aria-hidden="true">✦</span><span>Добро пожаловать!</span><svg aria-hidden="true" viewBox="0 0 100 90"><use href="#och"/></svg></div>
       <div class="grid">
         <div class="tile date w"><small>Дата</small><div class="d"><span class="day">06</span><span class="mon">ноября 2026<br>пятница</span></div></div>
-        <div class="tile"><small>Время</small><b>17:00</b></div>
-        <div class="tile"><small>Осталось</small><b id="cd">…</b></div>
-        <div class="tile w"><small>Место встречи · Казань</small><b>Ресторан «Туган Авылым»</b><p style="margin-top:10px">Большой зал<br>ул. Туфана Миннуллина, 14/56</p></div>
-        <div class="tile w"><small>До скорой встречи</small><p>Ваше присутствие — лучший подарок. Приходите за тёплыми встречами, добрыми словами и праздничным настроением!</p></div>
+        <div class="tile w"><small>Начало вечера</small><b>17:00</b></div>
+        <div class="tile w"><small>До юбилейного вечера</small><b id="countdown" role="timer" aria-live="off">—</b></div>
+        <div class="tile w"><small>Место проведения · Казань</small><b>Ресторан «Туган Авылым»</b><p style="margin-top:10px">Большой зал<br>ул. Туфана Миннуллина, 14/56</p></div>
+
       </div>
 
 
@@ -246,21 +418,19 @@ h1{margin-top:24px;font-weight:800;font-size:clamp(25px,6vw,36px);line-height:1.
 
 
 
+
 <script>
 (function(){
-  var sky=document.getElementById('sky');
-  for(var i=0;i<12;i++){
-    var el=document.createElement('div'),ltr=i%2===0;
-    el.className='och';
-    el.innerHTML='<div><svg viewBox="0 0 100 90"><use href="#och"/></svg></div>';
-    var v={'--s':'clamp(30px, 5vw, 62px)','--x0':ltr?'-90px':'110vw','--x1':ltr?'110vw':'-90px','--y0':(5+i*8)+'vh','--y1':(10+i*7)+'vh','--sw':(3+i*.3)+'s','--d':(22+i*2)+'s','--dl':(-i*5)+'s'};
-    for(var k in v)el.style.setProperty(k,v[k]);
-    sky.appendChild(el);
+  var target=Date.parse('2026-11-06T17:00:00+03:00');
+  var output=document.getElementById('countdown');
+  function word(n,forms){var a=n%100,b=n%10;return forms[a>=11&&a<=14?2:b===1?0:b>=2&&b<=4?1:2]}
+  function update(){
+    var remaining=Math.max(0,target-Date.now());
+    if(!remaining){output.textContent='Юбилейный вечер начался';return}
+    var days=Math.floor(remaining/86400000),hours=Math.floor(remaining/3600000)%24,minutes=Math.floor(remaining/60000)%60;
+    output.textContent=days+' '+word(days,['день','дня','дней'])+' · '+hours+' '+word(hours,['час','часа','часов'])+' · '+minutes+' '+word(minutes,['минута','минуты','минут']);
   }
-  var cd=document.getElementById('cd');
-  var target=new Date('2026-11-06T17:00:00+03:00').getTime();
-  function tick(){var d=target-Date.now();if(d<=0){cd.textContent='Праздник начался';return}cd.textContent=Math.floor(d/864e5)+' дн. '+Math.floor(d%864e5/36e5)+' ч.'}
-  tick();setInterval(tick,60000);
+  update();setInterval(update,30000);
 })();
 </script>
 </body>
