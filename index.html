@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Приглашение на юбилей</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2a0a16; --cream:#f6ead3; --coral:#f0482a; --emerald:#0f6b57; --gold:#e9a443;
+  color-scheme:dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;background:var(--ink);color:var(--ink);font-family:"Manrope",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;overflow-x:hidden}
+
+.marq{position:relative;z-index:3;background:var(--coral);color:var(--ink);overflow:hidden;white-space:nowrap;border-bottom:3px solid var(--ink)}
+.marq .track{display:inline-flex;gap:22px;padding:11px 0;animation:marq 28s linear infinite;font:800 14px/1 "Unbounded",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.marq span{display:inline-flex;align-items:center;gap:22px}
+.marq svg{width:16px;height:20px;color:var(--ink)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+.star{position:fixed;left:50%;top:50%;width:min(130vw,980px);aspect-ratio:1;margin:calc(min(130vw,980px)/-2) 0 0 calc(min(130vw,980px)/-2);z-index:0;pointer-events:none;animation:spin 120s linear infinite;opacity:.55}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+main{position:relative;z-index:1;display:flex;justify-content:center;padding:34px 16px 22px}
+.card{
+  position:relative;width:min(620px,100%);background:var(--cream);border-radius:34px;
+  border:3px solid var(--ink);box-shadow:8px 8px 0 var(--coral);
+  padding:0 0 34px;text-align:center;animation:pop .9s cubic-bezier(.2,.9,.25,1.1) both;
+}
+.band{height:34px;border-radius:30px 30px 0 0;border-bottom:3px solid var(--ink);
+  background:var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='30' viewBox='0 0 48 30'%3E%3Cpath fill='%23f0482a' d='M12 3c3 3 6 6 6 10a6 6 0 0 1-12 0c0-4 3-7 6-10z'/%3E%3Cpath fill='%230f6b57' d='M36 27c-3-3-6-6-6-10a6 6 0 0 1 12 0c0 4-3 7-6 10z'/%3E%3C/svg%3E") repeat-x center/auto 30px}
+.band.b{border-bottom:0;border-top:3px solid var(--ink);border-radius:0 0 30px 30px;position:absolute;left:0;right:0;bottom:0}
+.in{padding:30px 22px 44px}
+.tag{display:inline-block;background:var(--emerald);color:var(--cream);font:800 12px/1 "Unbounded",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:9px 16px;border-radius:99px;transform:rotate(-2deg)}
+h1{margin:18px 0 0;font:800 clamp(28px,7.6vw,54px)/1.04 "Unbounded",Arial,sans-serif;letter-spacing:-.02em;text-wrap:balance;animation:up .9s .2s both}
+h1 em{font-style:normal;color:var(--coral)}
+.name{margin:12px 0 4px;font:800 clamp(46px,15vw,104px)/1 "Unbounded",Arial,sans-serif;letter-spacing:-.04em;color:var(--emerald);animation:up .9s .35s both}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 26px;animation:up .9s .5s both}
+.tile{background:var(--ink);color:var(--cream);border-radius:22px;padding:16px 14px;text-align:left}
+.tile.w{grid-column:1/-1}
+.tile small{display:block;font:700 11px/1 "Manrope",Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
+.tile b{display:block;font:500 clamp(16px,4.4vw,20px)/1.25 "Unbounded",Arial,sans-serif}
+@media (max-width:380px){.grid{grid-template-columns:1fr}}
+.btn{
+  font:800 clamp(14px,3.8vw,17px)/1 "Unbounded",Arial,sans-serif;color:var(--cream);background:var(--ink);cursor:pointer;
+  border:3px solid var(--ink);border-radius:99px;padding:19px 30px;display:inline-flex;align-items:center;gap:12px;
+  box-shadow:5px 5px 0 var(--coral);transition:transform .18s,box-shadow .18s,background .18s;animation:up .9s .65s both;
+}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--coral)}
+.btn:active{transform:translate(4px,4px);box-shadow:1px 1px 0 var(--coral)}
+.btn:focus-visible{outline:3px solid var(--emerald);outline-offset:4px}
+.btn.ok{background:var(--emerald)}
+.btn svg{width:20px;height:20px}
+.thanks{min-height:24px;margin:18px 0 0;font-weight:700;color:var(--emerald);opacity:0;transition:opacity .6s}
+.thanks.on{opacity:1}
+
+.st{position:absolute;width:var(--s);aspect-ratio:100/90;z-index:2;pointer-events:none;opacity:0;animation:stk 1.2s var(--dl) cubic-bezier(.2,1.2,.3,1) forwards}
+.st>div{width:100%;height:100%;animation:sway var(--sw) ease-in-out infinite alternate}
+.st svg,.och svg{width:100%;height:100%;display:block}
+
+.sky{position:fixed;inset:0;z-index:4;pointer-events:none;overflow:hidden}
+.och{position:absolute;left:0;top:0;width:var(--s);aspect-ratio:100/90;opacity:0;animation:fly var(--d) linear var(--dl) infinite}
+.och>div{width:100%;height:100%;animation:sway var(--sw) ease-in-out infinite alternate}
+
+footer{position:relative;z-index:1;text-align:center;padding:14px 16px 34px;color:var(--cream)}
+.sign{margin:0;font:800 clamp(15px,4.4vw,20px)/1.3 "Unbounded",Arial,sans-serif;letter-spacing:.02em}
+.sign i{font-style:normal;color:var(--coral)}
+
+@keyframes pop{from{opacity:0;transform:translateY(30px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes stk{from{opacity:0;transform:scale(.3) rotate(-40deg)}to{opacity:1;transform:rotate(var(--r))}}
+@keyframes sway{from{transform:rotate(-9deg) translateY(-5px)}to{transform:rotate(9deg) translateY(6px)}}
+@keyframes fly{0%{opacity:0;transform:translate(var(--x0),var(--y0))}8%{opacity:1}92%{opacity:1}100%{opacity:0;transform:translate(var(--x1),var(--y1))}}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01s!important;animation-iteration-count:1!important}
+  .sky,.star{display:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="tl" viewBox="0 0 24 32"><path fill="currentColor" d="M12 1c3 4 8 7 8 14a8 8 0 0 1-16 0c0-7 5-10 8-14z"/></symbol>
+  <symbol id="och" viewBox="0 0 100 90">
+    <path d="M50 4c5 0 8 4 11 10l33 58c4 8 0 14-8 14H14c-8 0-12-6-8-14l33-58c3-6 6-10 11-10z" fill="#e9a443" stroke="#2a0a16" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M50 16L18 72M50 16l32 56M22 76h56" fill="none" stroke="#2a0a16" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 7" opacity=".75"/>
+    <ellipse cx="50" cy="52" rx="7" ry="4.5" fill="#2a0a16"/>
+    <path d="M28 60c6-8 14-12 22-12" fill="none" stroke="#fff3c9" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+  </symbol>
+</svg>
+
+<svg class="star" viewBox="-100 -100 200 200" aria-hidden="true" fill="none" stroke="#0f6b57" stroke-width=".8">
+  <rect x="-60" y="-60" width="120" height="120"/>
+  <rect x="-60" y="-60" width="120" height="120" transform="rotate(45)"/>
+  <rect x="-40" y="-40" width="80" height="80" stroke="#f0482a"/>
+  <rect x="-40" y="-40" width="80" height="80" transform="rotate(45)" stroke="#f0482a"/>
+  <circle r="86"/><circle r="22" stroke="#e9a443"/>
+</svg>
+
+<div class="marq" aria-hidden="true">
+  <div class="track">
+    <span>Приглашаем<svg><use href="#tl"/></svg>Юбилей<svg><use href="#tl"/></svg>Праздник<svg><use href="#tl"/></svg>Будем рады<svg><use href="#tl"/></svg>Приглашаем<svg><use href="#tl"/></svg>Юбилей<svg><use href="#tl"/></svg>Праздник<svg><use href="#tl"/></svg>Будем рады<svg><use href="#tl"/></svg></span>
+    <span>Приглашаем<svg><use href="#tl"/></svg>Юбилей<svg><use href="#tl"/></svg>Праздник<svg><use href="#tl"/></svg>Будем рады<svg><use href="#tl"/></svg>Приглашаем<svg><use href="#tl"/></svg>Юбилей<svg><use href="#tl"/></svg>Праздник<svg><use href="#tl"/></svg>Будем рады<svg><use href="#tl"/></svg></span>
+  </div>
+</div>
+
+<main>
+  <section class="card">
+    <div class="st" style="--s:78px;--r:-14deg;--dl:.9s;--sw:4.5s;left:-22px;top:-30px" aria-hidden="true"><div><svg><use href="#och"/></svg></div></div>
+    <div class="st" style="--s:66px;--r:12deg;--dl:1.2s;--sw:5.2s;right:-18px;top:90px" aria-hidden="true"><div><svg><use href="#och"/></svg></div></div>
+    <div class="st" style="--s:72px;--r:8deg;--dl:1.5s;--sw:4.8s;left:-16px;bottom:70px" aria-hidden="true"><div><svg><use href="#och"/></svg></div></div>
+
+    <div class="band"></div>
+    <div class="in">
+      <span class="tag">Дорогие гости</span>
+      <h1>Приглашаем<br>на <em>юбилей!</em></h1>
+      <div class="name">Рифат</div>
+
+      <div class="grid">
+        <div class="tile"><small>Дата</small><b>15 ноября 2026, воскресенье</b></div>
+        <div class="tile"><small>Время</small><b>17:00</b></div>
+        <div class="tile w"><small>Адрес</small><b>Казань, ул. Баумана, 1, банкетный зал «Тулпар»</b></div>
+      </div>
+
+      <button class="btn" id="rsvp" type="button"><span id="lbl">Подтвердить присутствие</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="thanks" id="thanks" role="status" aria-live="polite"></p>
+    </div>
+    <div class="band b"></div>
+  </section>
+</main>
+
+<footer><p class="sign">Рифату от Карины <i>♥</i></p></footer>
+
+<div class="sky" id="sky" aria-hidden="true"></div>
+
+<script>
+(function(){
+  var sky=document.getElementById('sky'),W=innerWidth,H=innerHeight,small=W<600,n=small?4:6;
+  for(var i=0;i<n;i++){
+    var ltr=i%2===0,y=.1+Math.random()*.8,s=(small?38:52)+Math.random()*26,el=document.createElement('div');
+    el.className='och';
+    el.innerHTML='<div><svg viewBox="0 0 100 90"><use href="#och"/></svg></div>';
+    var v={'--s':s+'px','--x0':(ltr?-110:W+20)+'px','--x1':(ltr?W+20:-110)+'px','--y0':Math.round(y*H)+'px','--y1':Math.round((y+Math.random()*.16-.08)*H)+'px','--sw':(2.5+Math.random()*2.5)+'s','--d':(17+Math.random()*10)+'s','--dl':(i*3+Math.random()*2)+'s'};
+    for(var k in v)el.style.setProperty(k,v[k]);
+    sky.appendChild(el);
+  }
+  var b=document.getElementById('rsvp'),t=document.getElementById('thanks'),lbl=document.getElementById('lbl'),done=false;
+  b.addEventListener('click',function(){
+    if(done)return;done=true;
+    lbl.textContent='Вы с нами ✓';b.classList.add('ok');
+    t.textContent='Спасибо! Будем рады видеть вас на празднике.';t.classList.add('on');
+  });
+})();
+</script>
+</body>
+</html>
