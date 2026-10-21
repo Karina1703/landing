@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Приглашение на юбилей</title>
+<title>60-летие Раиля Ильдаровича · 6 ноября 2026</title>
+<meta name="description" content="Приглашение на 60-летний юбилей Раиля Ильдаровича. 6 ноября 2026 года, 17:00, ресторан «Туган Авылым», большой зал, Казань.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@500;700&display=swap" rel="stylesheet">
@@ -35,7 +36,7 @@ body{margin:0;min-height:100vh;background:var(--ink);color:var(--ink);font-famil
 
 main{position:relative;z-index:1;display:flex;justify-content:center;padding:34px 16px 22px;overflow-x:clip}
 .card{
-  position:relative;width:min(620px,100%);background:var(--cream);border-radius:34px;
+  position:relative;width:min(580px,100%);background:var(--cream);border-radius:34px;
   border:3px solid var(--ink);box-shadow:8px 8px 0 var(--coral);
   padding:0 0 34px;text-align:center;animation:pop .9s cubic-bezier(.2,.9,.25,1.1) both;
 }
@@ -44,9 +45,19 @@ main{position:relative;z-index:1;display:flex;justify-content:center;padding:34p
 .band.b{border-bottom:0;border-top:3px solid var(--ink);border-radius:0 0 30px 30px;position:absolute;left:0;right:0;bottom:0}
 .in{padding:28px clamp(16px,5vw,24px) 48px}
 .tag{display:inline-block;background:var(--emerald);color:var(--cream);font:800 12px/1 "Unbounded",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:9px 16px;border-radius:99px;transform:rotate(-2deg)}
-h1{margin:18px 0 0;font:800 clamp(28px,7.6vw,54px)/1.04 "Unbounded",Arial,sans-serif;letter-spacing:-.02em;text-wrap:balance;animation:up .9s .2s both}
+h1{margin:22px 0 0;font:500 clamp(22px,5.4vw,32px)/1.3 "Unbounded",Arial,sans-serif;letter-spacing:-.035em;text-wrap:balance;animation:up .9s .2s both}
 h1 em{font-style:normal;color:var(--coral)}
-.name{overflow-wrap:anywhere;margin:12px 0 4px;font:800 clamp(46px,15vw,104px)/1 "Unbounded",Arial,sans-serif;letter-spacing:-.04em;color:var(--emerald);animation:up .9s .35s both}
+.name{position:relative;width:fit-content;max-width:100%;margin:24px auto 0;padding:18px 24px 0;font:800 clamp(38px,9vw,58px)/1.08 "Unbounded",Arial,sans-serif;letter-spacing:-.045em;color:var(--emerald);animation:up .9s .35s both}
+.name::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:110px;height:1px;background:linear-gradient(90deg,transparent,#c89b53,transparent)}
+.portrait{position:relative;margin:26px auto 36px;width:88%;max-width:340px;padding:7px;background:#fff8e9;border:1px solid #c89b53;border-radius:24px;box-shadow:0 8px 22px rgba(42,10,22,.12);isolation:isolate}
+.portrait img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:17px}
+.portrait figcaption{position:absolute;left:50%;bottom:-17px;transform:translateX(-50%);display:flex;align-items:baseline;gap:6px;white-space:nowrap;padding:9px 18px;background:var(--emerald);color:var(--cream);border:2px solid var(--cream);outline:1px solid #c89b53;border-radius:99px;font:800 22px/1 "Unbounded",Arial,sans-serif;box-shadow:0 3px 8px rgba(42,10,22,.1)}
+.portrait figcaption span{font:800 10px/1 "Unbounded",Arial,sans-serif}
+.patronymic{display:block;margin-top:8px;font-size:.39em;font-weight:500;letter-spacing:.01em}
+.intro{max-width:410px;margin:30px auto 0;font-size:15px;line-height:1.8;text-wrap:pretty}
+.salutation{display:block;margin-bottom:14px;font-size:14px;line-height:1.65;letter-spacing:.025em;color:var(--emerald)}
+.salutation span{display:block;font-size:12px;letter-spacing:.05em}
+.intro::after{content:"✦";display:block;margin-top:20px;color:#bb8d43;font-size:18px;line-height:1}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 26px;animation:up .9s .5s both}
 .tile{background:var(--ink);color:var(--cream);border-radius:22px;padding:16px 14px;text-align:left}
 .tile.w{grid-column:1/-1}
@@ -86,7 +97,7 @@ h1 em{font-style:normal;color:var(--coral)}
 .st svg,.och svg{width:100%;height:100%;display:block}
 
 /* летящие очпочмаки */
-.sky{position:fixed;inset:0;z-index:4;pointer-events:none;overflow:hidden}
+.sky{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 .och{position:absolute;left:0;top:0;width:var(--s);aspect-ratio:100/90;opacity:0;animation:fly var(--d) linear var(--dl) infinite}
 .och>div{width:100%;height:100%;animation:sway var(--sw) ease-in-out infinite alternate}
 
@@ -99,6 +110,71 @@ footer{position:relative;z-index:1;text-align:center;padding:14px 16px 34px;colo
 @keyframes stk{from{opacity:0;transform:scale(.3) rotate(-40deg)}to{opacity:1;transform:rotate(var(--r))}}
 @keyframes sway{from{transform:rotate(-9deg) translateY(-5px)}to{transform:rotate(9deg) translateY(6px)}}
 @keyframes fly{0%{opacity:0;transform:translate(var(--x0),var(--y0))}8%{opacity:1}92%{opacity:1}100%{opacity:0;transform:translate(var(--x1),var(--y1))}}
+/* Праздничная композиция */
+.in{position:relative;padding-top:30px;background:radial-gradient(ellipse at 50% 20%,#fff9eb 0%,transparent 62%)}
+.tag{font-size:10px;letter-spacing:.13em;padding:10px 17px;transform:rotate(-3deg);box-shadow:3px 3px 0 #e9a443}
+h1{margin-top:24px;font-weight:800;font-size:clamp(25px,6vw,36px);line-height:1.14}
+.name{margin-top:18px;padding-top:0;font-size:clamp(40px,10vw,62px)}
+.name::before{display:none}
+.patronymic{margin-top:6px;font-size:.36em}
+.portrait{margin-top:22px;max-width:350px;transform:rotate(-1deg);box-shadow:0 12px 24px #2a0a1617,5px 5px 0 #e9a44355}
+.portrait::before,.portrait::after{position:absolute;z-index:2;font-family:serif;line-height:1;pointer-events:none;text-shadow:0 2px 0 var(--cream)}
+.portrait::before{content:"✦";font-size:40px;color:var(--coral);left:-18px;top:20px;transform:rotate(12deg)}
+.portrait::after{content:"✧";font-size:52px;color:var(--emerald);right:-20px;bottom:28px}
+.portrait figcaption{background:var(--coral);color:var(--cream);outline-color:var(--coral);font-size:25px;padding:10px 20px}
+.salutation{font-size:15px;line-height:1.6;margin-bottom:12px}
+.salutation span{font-size:12px}
+.intro{margin-top:34px}
+.card{box-shadow:7px 7px 0 var(--coral),0 20px 65px #0003}
+.tile{border:1px solid #e9a44355}
+@media(min-width:700px){main{padding-top:48px;padding-bottom:30px}.in{padding-left:36px;padding-right:36px}}
+.folk-divider{display:flex;align-items:center;justify-content:center;gap:16px;margin:22px auto 4px;color:var(--emerald)}
+.folk-divider::before,.folk-divider::after{content:"";height:1px;width:64px;background:linear-gradient(90deg,transparent,var(--gold))}
+.folk-divider::after{transform:rotate(180deg)}
+.folk-divider svg{width:30px;height:38px}
+.folk-ribbon{flex-wrap:wrap;display:flex;align-items:center;justify-content:center;gap:8px;margin:0 auto 22px;padding:12px 4px;border-top:1px solid #c89b5366;border-bottom:1px solid #c89b5366;color:var(--emerald);font-size:12px;font-weight:700;letter-spacing:.03em}
+.folk-ribbon svg{width:30px;height:28px;flex-shrink:0}
+.band{height:40px;background-size:auto 34px;background-color:#f3dfb7}
+.band.b{height:40px}
+.card{border-color:#60302b}
+.tile small::before{content:"✦";margin-right:7px;color:var(--gold)}
+@media(max-width:600px){
+  html,body{max-width:100%;overflow-x:hidden}
+  main{padding:22px 14px 14px}
+  .card{border-radius:25px;box-shadow:4px 4px 0 var(--coral)}
+  .in{padding:22px 16px 38px}
+  .band{height:28px;border-radius:21px 21px 0 0;background-size:auto 24px}
+  .band.b{height:28px;border-radius:0 0 21px 21px}
+  .st{max-width:48px}
+  .tag{font-size:9px;padding:8px 13px}
+  h1{font-size:clamp(23px,6vw,32px);margin-top:18px}
+  .name{font-size:clamp(34px,9vw,48px);margin-top:14px;padding-left:0;padding-right:0}
+  .patronymic{font-size:.4em}
+  .portrait{width:86%;max-width:290px;margin:20px auto 28px;padding:5px;border-radius:20px}
+  .portrait img{border-radius:15px}
+  .portrait figcaption{font-size:20px;padding:8px 15px;bottom:-14px}
+  .portrait::before{font-size:28px;left:-13px}
+  .portrait::after{font-size:34px;right:-14px}
+  .folk-divider{margin-top:16px;gap:10px}
+  .folk-divider svg{width:23px;height:29px}
+  .intro{font-size:14px;line-height:1.65;margin-top:15px}
+  .salutation{font-size:13px;margin-bottom:10px}
+  .salutation span{font-size:11px}
+  .intro::after{margin-top:14px}
+  .folk-ribbon{font-size:10px;gap:6px;margin-bottom:16px}
+  .folk-ribbon svg{width:22px;height:22px}
+  .grid{gap:8px;margin:16px 0 0;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .tile{min-width:0;padding:14px 12px;border-radius:17px;overflow-wrap:anywhere}
+  .tile b{font-size:clamp(14px,3.7vw,18px)}
+  .tile p{font-size:13px}
+  .tile small{font-size:9px;letter-spacing:.14em}
+  .day{font-size:54px}
+  .mon{font-size:14px}
+  .date .d{gap:12px}
+  footer{padding:12px 20px 24px}
+  .sign{font-size:13px;line-height:1.6}
+  .marq .track{font-size:10px;padding:8px 0}
+}
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.01s!important;animation-iteration-count:1!important}
   .sky,.star{display:none}
@@ -109,6 +185,7 @@ footer{position:relative;z-index:1;text-align:center;padding:14px 16px 34px;colo
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="tl" viewBox="0 0 24 32"><path fill="currentColor" d="M12 1c3 4 8 7 8 14a8 8 0 0 1-16 0c0-7 5-10 8-14z"/></symbol>
+  <symbol id="folk-tulip" viewBox="0 0 40 50"><path d="M20 45V24" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 33C7 33 5 23 5 23c11-1 15 10 15 10zm0 6c13 0 15-10 15-10-11-1-15 10-15 10z" fill="currentColor"/><path d="M20 4l6 10 9-6c1 15-5 21-15 21S4 23 5 8l9 6z" fill="#f0482a"/><path d="M20 10v14" stroke="#e9a443" stroke-width="2" fill="none"/></symbol>
   <symbol id="och" viewBox="0 0 100 90">
     <path d="M50 4c5 0 8 4 11 10l33 58c4 8 0 14-8 14H14c-8 0-12-6-8-14l33-58c3-6 6-10 11-10z" fill="#e9a443" stroke="#2a0a16" stroke-width="5" stroke-linejoin="round"/>
     <path d="M50 16L18 72M50 16l32 56M22 76h56" fill="none" stroke="#2a0a16" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 7" opacity=".75"/>
@@ -132,62 +209,56 @@ footer{position:relative;z-index:1;text-align:center;padding:14px 16px 34px;colo
   </div>
 </div>
 
+<div class="sky" id="sky" aria-hidden="true"></div>
+
 <main>
   <section class="card">
     <div class="st" style="--s:78px;--r:-14deg;--dl:.9s;--sw:4.5s;left:-8px;top:-28px" aria-hidden="true"><div><svg><use href="#och"/></svg></div></div>
-    <div class="st" style="--s:66px;--r:12deg;--dl:1.2s;--sw:5.2s;right:-8px;top:96px" aria-hidden="true"><div><svg><use href="#och"/></svg></div></div>
+    <div class="st" style="--s:66px;--r:12deg;--dl:1.2s;--sw:5.2s;right:-8px;top:-22px" aria-hidden="true"><div><svg><use href="#och"/></svg></div></div>
     <div class="st" style="--s:72px;--r:8deg;--dl:1.5s;--sw:4.8s;left:-8px;bottom:70px" aria-hidden="true"><div><svg><use href="#och"/></svg></div></div>
 
     <div class="band"></div>
     <div class="in">
-      <span class="tag">Дорогие гости</span>
-      <h1>Приглашаем<br>на <em>юбилей!</em></h1>
-      <div class="name">Рифат</div>
+      <svg aria-hidden="true" width="100%" height="210" viewBox="0 0 500 210" preserveAspectRatio="none" style="position:absolute;inset:0 0 auto;pointer-events:none"><g fill="#e9a443"><circle cx="26" cy="42" r="4"/><circle cx="472" cy="147" r="3"/><path d="M38 120l5 9-10-1z"/></g><g fill="#f0482a"><rect x="461" y="48" width="4" height="13" rx="2" transform="rotate(24 463 54)"/><circle cx="22" cy="184" r="3"/></g><g fill="#0f6b57"><rect x="37" y="73" width="4" height="12" rx="2" transform="rotate(-24 39 79)"/><path d="M472 94l5 9-10-1z"/></g></svg>
+      <span class="tag">60 лет · Юбилей</span>
+      <h1>Приглашаем<br>на <em>60-летие</em></h1>
+      <div class="name">Раиля<span class="patronymic">Ильдаровича</span></div>
+      <figure class="portrait"><img src="assets/rail-portrait.jpg" width="750" height="500" alt="Раиль Ильдарович" fetchpriority="high"><figcaption>60 <span>лет</span></figcaption></figure>
+      <div class="folk-divider" aria-hidden="true"><svg><use href="#folk-tulip"/></svg></div>
+      <p class="intro"><strong class="salutation">ДОРОГИЕ ДРУЗЬЯ,<span lang="tt">ХӨРМӘТЛЕ ДУСЛАРЫМ!</span></strong>Приглашаем вас на юбилей Раиля Ильдаровича! Давайте вместе отметим его 60-летие в кругу родных и друзей.</p>
 
+      <div class="folk-ribbon"><svg aria-hidden="true" viewBox="0 0 100 90"><use href="#och"/></svg><span lang="tt">Рәхим итегез!</span><span aria-hidden="true">✦</span><span>Добро пожаловать!</span><svg aria-hidden="true" viewBox="0 0 100 90"><use href="#och"/></svg></div>
       <div class="grid">
-        <div class="tile date w"><small>Дата</small><div class="d"><span class="day">15</span><span class="mon">ноября 2026<br>воскресенье</span></div></div>
+        <div class="tile date w"><small>Дата</small><div class="d"><span class="day">06</span><span class="mon">ноября 2026<br>пятница</span></div></div>
         <div class="tile"><small>Время</small><b>17:00</b></div>
         <div class="tile"><small>Осталось</small><b id="cd">…</b></div>
-        <div class="tile w"><small>Адрес</small><b>Казань, ул. Баумана, 1, банкетный зал «Тулпар»</b><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C%2C%20%D1%83%D0%BB.%20%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0%2C%201" target="_blank" rel="noopener">Открыть на карте →</a></div>
-        <div class="tile w"><small>Дресс-код</small><p>Нарядно и с настроением! Палитра вечера: бордовый, изумрудный и золотой. Будем рады татарским акцентам: тюбетей, орнамент, украшения.</p><div class="dots" aria-hidden="true"><i style="background:#6b1a2b"></i><i style="background:#0f6b57"></i><i style="background:#e9a443"></i><i style="background:#f6ead3"></i></div></div>
-        <div class="tile w"><small>Программа вечера</small><ul class="prog"><li><time>17:00</time><span>Сбор гостей, встреча с чаем</span></li><li><time>18:00</time><span>Торжественная часть и поздравления</span></li><li><time>19:30</time><span>Праздничный ужин, очпочмаки и тосты</span></li><li><time>21:00</time><span>Музыка и танцы</span></li></ul></div>
-        
-        
-        <div class="tile w"><small>Важно</small><p>Пожалуйста, подтвердите присутствие заранее, чтобы мы могли рассадить всех гостей и приготовить достаточно угощения.</p></div>
+        <div class="tile w"><small>Место встречи · Казань</small><b>Ресторан «Туган Авылым»</b><p style="margin-top:10px">Большой зал<br>ул. Туфана Миннуллина, 14/56</p></div>
+        <div class="tile w"><small>До скорой встречи</small><p>Ваше присутствие — лучший подарок. Приходите за тёплыми встречами, добрыми словами и праздничным настроением!</p></div>
       </div>
 
-      <button class="btn" id="rsvp" type="button"><span id="lbl">Подтвердить присутствие</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
-      </button>
-      <p class="thanks" id="thanks" role="status" aria-live="polite"></p>
-      <button class="undo" id="undo" type="button" hidden>Изменить ответ</button>
+
     </div>
     <div class="band b"></div>
   </section>
 </main>
 
-<footer><p class="sign">Рифату от Карины <i>♥</i></p></footer>
+<footer><p class="sign">С уважением, <span lang="tt">ихтирам белән,</span><br>ваш Раиль Ильдарович <i>♥</i></p></footer>
 
-<div class="sky" id="sky" aria-hidden="true"></div>
+
 
 <script>
 (function(){
-  var sky=document.getElementById('sky'),W=innerWidth,H=innerHeight,small=W<600,n=small?4:6;
-  for(var i=0;i<n;i++){
-    var ltr=i%2===0,y=.1+Math.random()*.8,s=(small?38:52)+Math.random()*26,el=document.createElement('div');
+  var sky=document.getElementById('sky');
+  for(var i=0;i<12;i++){
+    var el=document.createElement('div'),ltr=i%2===0;
     el.className='och';
     el.innerHTML='<div><svg viewBox="0 0 100 90"><use href="#och"/></svg></div>';
-    var v={'--s':s+'px','--x0':(ltr?-110:W+20)+'px','--x1':(ltr?W+20:-110)+'px','--y0':Math.round(y*H)+'px','--y1':Math.round((y+Math.random()*.16-.08)*H)+'px','--sw':(2.5+Math.random()*2.5)+'s','--d':(17+Math.random()*10)+'s','--dl':(i*3+Math.random()*2)+'s'};
+    var v={'--s':'clamp(30px, 5vw, 62px)','--x0':ltr?'-90px':'110vw','--x1':ltr?'110vw':'-90px','--y0':(5+i*8)+'vh','--y1':(10+i*7)+'vh','--sw':(3+i*.3)+'s','--d':(22+i*2)+'s','--dl':(-i*5)+'s'};
     for(var k in v)el.style.setProperty(k,v[k]);
     sky.appendChild(el);
   }
-  var b=document.getElementById('rsvp'),t=document.getElementById('thanks'),lbl=document.getElementById('lbl'),u=document.getElementById('undo'),cd=document.getElementById('cd'),K='rsvp-yes',on=false;
-  function set(v){b.classList.toggle('ok',v);b.setAttribute('aria-pressed',v);lbl.textContent=v?'Вы с нами ✓':'Подтвердить присутствие';t.textContent=v?'Спасибо! Будем рады видеть вас на празднике.':'';t.classList.toggle('on',v);u.hidden=!v}
-  try{on=localStorage.getItem(K)==='1'}catch(e){}
-  set(on);
-  b.addEventListener('click',function(){if(on)return;on=true;set(true);try{localStorage.setItem(K,'1')}catch(e){}});
-  u.addEventListener('click',function(){on=false;set(false);try{localStorage.removeItem(K)}catch(e){}});
-  var target=new Date(2026,10,15,17,0).getTime();
+  var cd=document.getElementById('cd');
+  var target=new Date('2026-11-06T17:00:00+03:00').getTime();
   function tick(){var d=target-Date.now();if(d<=0){cd.textContent='Праздник начался';return}cd.textContent=Math.floor(d/864e5)+' дн. '+Math.floor(d%864e5/36e5)+' ч.'}
   tick();setInterval(tick,60000);
 })();
