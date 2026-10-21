@@ -62,6 +62,8 @@ h1{line-height:1.02}
 @media(max-width:350px){.age strong{font-size:80px}h1{font-size:44px}h1 span{font-size:29px}}
 #reply.form-error{border-color:#c7a66d;background:#fffaf1;line-height:1.7}#reply.form-error::before{content:"Не получилось отправить ответ";display:block;font-weight:600;margin-bottom:6px}.rsvp button:disabled{cursor:wait;opacity:.65}.portrait img{background:var(--paper)}
 .details{border-top:0}
+/* Скрываем только внедрённый бейдж Netlify */
+iframe[data-nl-ready],iframe[title="Powered by Netlify"]{display:none!important;visibility:hidden!important;pointer-events:none!important}
 </style>
 </head>
 <body>
