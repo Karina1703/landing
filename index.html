@@ -83,7 +83,7 @@ const controller=typeof AbortController!=='undefined'?new AbortController():null
 const timeout=controller?setTimeout(()=>controller.abort(),12000):null;
 try{
  if(navigator.onLine===false)throw Error('Похоже, нет подключения к интернету. Проверьте сеть и повторите попытку.');
- const result=await apiRequest(Object.assign({},options||{},controller?{signal:controller.signal}:{}));
+ const r=await fetch('/api/rsvp',Object.assign({},options||{},controller?{signal:controller.signal}:{}));
  if(!(r.headers.get('content-type')||'').includes('application/json'))throw Error('Сервис временно недоступен. Повторите попытку чуть позже.');
  let data;try{data=await r.json()}catch{throw Error('Не удалось получить ответ сервера. Повторите попытку позже.')}
  if(!data||typeof data!=='object')throw Error('Сервис вернул некорректный ответ. Попробуйте позже.');
