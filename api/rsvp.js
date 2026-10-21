@@ -5,7 +5,7 @@ module.exports = async (req, res) => {
   const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
   if (!url || !token) return res.status(503).json({error:'Приём ответов пока настраивается. Пожалуйста, попробуйте позже.'});
   async function redis(command) {
-    const r = await fetch(url, {method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(command)});
+    const r = await fetch(url, {signal:AbortSignal.timeout(8000),method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(command)});
     const data = await r.json();
     if (!r.ok || data.error) throw new Error('Storage unavailable');
     return data.result;
@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
   try {
     if (req.method === 'GET') {
       const entries = await redis(['HVALS','jubilee:2026:guests']);
-      return res.status(200).json({guests:entries.map(x=>JSON.parse(x)).sort((a,b)=>b.createdAt.localeCompare(a.createdAt))});
+      return res.status(200).json({guests:entries.map(x=>typeof x==='string'?JSON.parse(x):x).sort((a,b)=>b.createdAt.localeCompare(a.createdAt))});
     }
     if(req.method==='DELETE') {
       const body=typeof req.body==='string'?JSON.parse(req.body):req.body;
