@@ -41,6 +41,14 @@
 .message h2{margin:8px 0 9px}.tatar{margin-bottom:18px}
 @media(max-width:600px){.eyebrow{font-size:10px;letter-spacing:.13em}.reference-divider{margin-bottom:11px}.age{gap:18px;margin:2px 0 12px}.age strong{font-size:88px}.age span{font-size:15px}.age span::after{font-size:30px}.caption{font-size:25px;margin-bottom:10px}.message{padding:14px 23px 22px}.message h2{font-size:30px}.tatar{font-size:17px;margin-bottom:17px}.message p:last-child{font-size:16px;line-height:1.45;max-width:360px}}
 @media(max-width:350px){.age strong{font-size:78px}.message h2{font-size:27px}.message p:last-child{font-size:15px;line-height:1.5}}
+/* Выразительный фокус и орнамент формы */
+.rsvp input[type=text]{transition:border-color .18s,box-shadow .18s}
+.rsvp input[type=text]:focus,.rsvp input[type=text]:focus-visible{border-color:#805b70!important;outline:2px solid #805b70;outline-offset:2px;box-shadow:0 0 0 6px #805b7010}
+.rsvp fieldset label:focus-within{border-color:var(--plum);box-shadow:0 0 0 3px #805b7018}
+.rsvp fieldset label:has(input:checked){border-color:var(--plum);background:#805b7008}
+.rsvp h2::after{content:"";display:block;width:150px;height:24px;margin:15px auto 17px;background:center/contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 28'%3E%3Cpath d='M0 14h65m50 0h65M90 2l7 8 9 4-9 4-7 8-7-8-9-4 9-4zM90 8c-11 0-10 12 0 13 10-1 11-13 0-13z' fill='none' stroke='%23c7a66d' stroke-width='1.5'/%3E%3C/svg%3E")}
+.rsvp{border-color:#c7a66daa}
+@media(prefers-reduced-motion:reduce){.rsvp input[type=text]{transition:none}}
 </style>
 </head>
 <body>
